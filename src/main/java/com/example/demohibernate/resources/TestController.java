@@ -1,5 +1,6 @@
 package com.example.demohibernate.resources;
 
+import com.example.demohibernate.model.ManyToMany.Stock;
 import com.example.demohibernate.model.oneToMany.Category;
 import com.example.demohibernate.model.oneToMany.Product;
 import org.hibernate.Session;
@@ -49,6 +50,28 @@ public class TestController {
     category.setProducts(products);
 
     getSession().save(category);
+
+  }
+
+  public void saveStockCategory(){
+
+    Stock stock = new Stock();
+
+    stock.setName("KH");
+
+    com.example.demohibernate.model.ManyToMany.Category category1 = new com.example.demohibernate.model.ManyToMany.Category();
+    category1.setName("Iphone");
+
+    com.example.demohibernate.model.ManyToMany.Category category2 = new com.example.demohibernate.model.ManyToMany.Category();
+    category2.setName("Samsung");
+
+    List<com.example.demohibernate.model.ManyToMany.Category> categories = new ArrayList<>();
+    categories.add(category1);
+    categories.add(category2);
+
+    stock.setCategories(categories);
+
+    getSession().save(stock);
 
   }
 

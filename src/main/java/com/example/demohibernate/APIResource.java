@@ -25,6 +25,7 @@ public class APIResource {
     @RequestMapping("/hello")
     public String sayHello(){
         testController.save();
+        testController.saveStockCategory();
         return "hello";
     }
 
