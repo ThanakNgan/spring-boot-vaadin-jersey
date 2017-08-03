@@ -1,4 +1,4 @@
-package com.example.demohibernate.hibernateConfig;
+package com.example.demohibernate.config.hibernateConfig;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

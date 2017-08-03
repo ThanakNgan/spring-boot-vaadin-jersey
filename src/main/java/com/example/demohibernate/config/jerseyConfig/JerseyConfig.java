@@ -1,4 +1,4 @@
-package com.example.demohibernate.jerseyConfig;
+package com.example.demohibernate.config.jerseyConfig;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
